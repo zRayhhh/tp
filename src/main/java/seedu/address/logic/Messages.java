@@ -41,10 +41,9 @@ public class Messages {
                 .append(student.getPhone())
                 .append("; Email: ")
                 .append(student.getEmail())
-                .append("; Address: ")
-                .append(student.getAddress())
                 .append("; Tags: ");
         student.getTags().forEach(builder::append);
+        builder.append("; Studio Group: ").append(student.getStudioGroup());
         return builder.toString();
     }
 
@@ -59,12 +58,10 @@ public class Messages {
                 "Name: %s%n"
                         + "Phone: %s%n"
                         + "Email: %s%n"
-                        + "Address: %s%n"
                         + "Studio Group: %s",
                 student.getName(),
                 student.getPhone(),
                 student.getEmail(),
-                student.getAddress(),
                 student.getStudioGroup());
     }
 
